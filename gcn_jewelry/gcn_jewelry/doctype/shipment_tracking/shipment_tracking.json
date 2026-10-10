@@ -1,0 +1,86 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "hash",
+  "creation": "2026-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "sales_order",
+    "delivery_note",
+    "tracking_no",
+    "carrier",
+    "tracking_status",
+    "last_event_at",
+    "exception_reason"
+  ],
+  "fields": [
+    {
+      "fieldname": "sales_order",
+      "fieldtype": "Link",
+      "label": "Sales Order",
+      "options": "Sales Order"
+    },
+    {
+      "fieldname": "delivery_note",
+      "fieldtype": "Link",
+      "label": "Delivery Note",
+      "options": "Delivery Note"
+    },
+    {
+      "fieldname": "tracking_no",
+      "fieldtype": "Data",
+      "label": "Tracking No",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "carrier",
+      "fieldtype": "Data",
+      "label": "Carrier",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "tracking_status",
+      "fieldtype": "Select",
+      "label": "Tracking Status",
+      "options": "Pending\\nIn Transit\\nDelivered\\nException",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "last_event_at",
+      "fieldtype": "Datetime",
+      "label": "Last Event At"
+    },
+    {
+      "fieldname": "exception_reason",
+      "fieldtype": "Small Text",
+      "label": "Exception Reason"
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "is_submittable": 0,
+  "module": "Jewelry",
+  "name": "Shipment Tracking",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "GCN Jewelry Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}
