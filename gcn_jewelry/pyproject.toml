@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gcn_jewelry"
+version = "0.1.0"
+description = "Jewelry operations extensions for ERPNext"
+requires-python = ">=3.10"
+dependencies = ["requests>=2.31.0"]
+
+[tool.setuptools.packages.find]
+include = ["gcn_jewelry*"]
