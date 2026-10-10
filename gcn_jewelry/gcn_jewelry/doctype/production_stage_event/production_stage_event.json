@@ -1,0 +1,114 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "hash",
+  "creation": "2026-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "sku",
+    "procurement_batch",
+    "production_order",
+    "stage",
+    "owner",
+    "started_at",
+    "expected_at",
+    "completed_at",
+    "status",
+    "dwell_days",
+    "exception_reason"
+  ],
+  "fields": [
+    {
+      "fieldname": "sku",
+      "fieldtype": "Link",
+      "label": "SKU",
+      "options": "Item",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "procurement_batch",
+      "fieldtype": "Link",
+      "label": "Procurement Batch",
+      "options": "Procurement Batch"
+    },
+    {
+      "fieldname": "production_order",
+      "fieldtype": "Link",
+      "label": "Production Order",
+      "options": "Jewelry Production Order"
+    },
+    {
+      "fieldname": "stage",
+      "fieldtype": "Select",
+      "label": "Stage",
+      "options": "采购/买胚\\n做胚/定做\\n溜光\\n抛光\\n烧焊\\n电抛\\n电镀\\n镶钻/粘钻\\n清洗/手工\\n质检\\n入库\\n发货",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "owner",
+      "fieldtype": "Link",
+      "label": "Owner",
+      "options": "User"
+    },
+    {
+      "fieldname": "started_at",
+      "fieldtype": "Datetime",
+      "label": "Started At"
+    },
+    {
+      "fieldname": "expected_at",
+      "fieldtype": "Datetime",
+      "label": "Expected At"
+    },
+    {
+      "fieldname": "completed_at",
+      "fieldtype": "Datetime",
+      "label": "Completed At"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Open\\nIn Progress\\nCompleted\\nOverdue\\nCancelled",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "dwell_days",
+      "fieldtype": "Float",
+      "label": "Dwell Days"
+    },
+    {
+      "fieldname": "exception_reason",
+      "fieldtype": "Small Text",
+      "label": "Exception Reason"
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "is_submittable": 0,
+  "module": "Jewelry",
+  "name": "Production Stage Event",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "GCN Jewelry Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}
