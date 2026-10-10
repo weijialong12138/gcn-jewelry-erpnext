@@ -1,0 +1,1 @@
+recursive-include gcn_jewelry *.json *.js *.css *.html *.md
