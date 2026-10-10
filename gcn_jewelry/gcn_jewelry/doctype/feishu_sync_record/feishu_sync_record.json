@@ -1,0 +1,87 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "hash",
+  "creation": "2026-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "source_table",
+    "source_row_id",
+    "source_modified_at",
+    "erpnext_doctype",
+    "erpnext_document",
+    "sync_status",
+    "payload_json"
+  ],
+  "fields": [
+    {
+      "fieldname": "source_table",
+      "fieldtype": "Data",
+      "label": "Source Table",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "source_row_id",
+      "fieldtype": "Data",
+      "label": "Source Row ID",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "source_modified_at",
+      "fieldtype": "Datetime",
+      "label": "Source Modified At"
+    },
+    {
+      "fieldname": "erpnext_doctype",
+      "fieldtype": "Data",
+      "label": "ERPNext DocType"
+    },
+    {
+      "fieldname": "erpnext_document",
+      "fieldtype": "Dynamic Link",
+      "label": "ERPNext Document",
+      "options": "erpnext_doctype"
+    },
+    {
+      "fieldname": "sync_status",
+      "fieldtype": "Select",
+      "label": "Sync Status",
+      "options": "Pending\\nSynced\\nFailed",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "payload_json",
+      "fieldtype": "Long Text",
+      "label": "Payload JSON"
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "is_submittable": 0,
+  "module": "Jewelry",
+  "name": "Feishu Sync Record",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "GCN Jewelry Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}
