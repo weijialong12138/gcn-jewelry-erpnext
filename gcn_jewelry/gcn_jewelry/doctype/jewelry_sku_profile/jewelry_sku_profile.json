@@ -1,0 +1,90 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "hash",
+  "creation": "2026-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "sku",
+    "style_name",
+    "base_material",
+    "color",
+    "plating_process",
+    "image",
+    "platforms",
+    "remarks"
+  ],
+  "fields": [
+    {
+      "fieldname": "sku",
+      "fieldtype": "Link",
+      "label": "SKU",
+      "options": "Item",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "style_name",
+      "fieldtype": "Data",
+      "label": "Style Name",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "base_material",
+      "fieldtype": "Data",
+      "label": "Base Material"
+    },
+    {
+      "fieldname": "color",
+      "fieldtype": "Data",
+      "label": "Color"
+    },
+    {
+      "fieldname": "plating_process",
+      "fieldtype": "Data",
+      "label": "Plating Process"
+    },
+    {
+      "fieldname": "image",
+      "fieldtype": "Attach Image",
+      "label": "Image"
+    },
+    {
+      "fieldname": "platforms",
+      "fieldtype": "Small Text",
+      "label": "Platforms"
+    },
+    {
+      "fieldname": "remarks",
+      "fieldtype": "Small Text",
+      "label": "Remarks"
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "is_submittable": 0,
+  "module": "Jewelry",
+  "name": "Jewelry SKU Profile",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1
+    },
+    {
+      "role": "GCN Jewelry Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "report": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}
